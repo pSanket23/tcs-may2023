@@ -30,6 +30,7 @@ resource "aws_instance" "python-instance" {
   vpc_security_group_ids = [aws_security_group.prod_pri_sg.id]
   key_name               = aws_key_pair.my-tf-key.key_name
   user_data              = data.template_file.user_data.template
+  iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
 
   tags = {
     Name       = "main-python-instance"

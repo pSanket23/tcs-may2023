@@ -2,3 +2,6 @@
 .terraform
 *.pem
 env
+*.tfplan
+*.tfstate
+*.backup
